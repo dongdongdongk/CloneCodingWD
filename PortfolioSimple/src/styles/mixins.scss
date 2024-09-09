@@ -13,19 +13,19 @@ $breakpoin argument choices
 - desktop
   */
 
-  @mixin respond($breakpoin) {
-    @if $breakpoin == phone {
-        @media screen and (max-with: 37.5rem) {
+  @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media screen and (max-width: 37.5rem) {
             @content;
         } //600px
     }
-    @if $breakpoin == tab-port {
-        @media screen and (max-with: 56.25rem) {
+    @if $breakpoint == tab-port {
+        @media screen and (max-width: 56.25rem) {
             @content;
         } //900px
     }
-    @if $breakpoin == tab-land {
-        @media screen and (max-with: 75rem) {
+    @if $breakpoint == tab-land {
+        @media screen and (max-width: 75rem) {
             @content;
         } //1200px
     }
