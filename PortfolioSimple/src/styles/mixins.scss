@@ -12,3 +12,21 @@ $breakpoin argument choices
 - tab-land
 - desktop
   */
+
+  @mixin respond($breakpoin) {
+    @if $breakpoin == phone {
+        @media screen and (max-with: 37.5rem) {
+            @content;
+        } //600px
+    }
+    @if $breakpoin == tab-port {
+        @media screen and (max-with: 56.25rem) {
+            @content;
+        } //900px
+    }
+    @if $breakpoin == tab-land {
+        @media screen and (max-with: 75rem) {
+            @content;
+        } //1200px
+    }
+  }
