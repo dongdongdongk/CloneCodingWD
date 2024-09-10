@@ -5,7 +5,6 @@ import {
     FaInstagram,
     FaFacebookSquare,
     FaRegEnvelope,
-    FaFacebook,
 } from "react-icons/fa"
 
 const Hero = () => {
@@ -44,7 +43,7 @@ const Hero = () => {
                             <FaTwitter />
                         </a>
                         <a href='#'>
-                            <FaFacebook />
+                            <FaFacebookSquare />
                         </a>
                         <a href='#'>
                             <FaInstagram />

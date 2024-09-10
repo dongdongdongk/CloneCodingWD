@@ -1,1 +1,88 @@
-@import '../../styles/mixins.scss'
+@import '../../styles/mixins.scss';
+
+.hero {
+    background-color: #101014;
+    padding-block: 4rem;
+
+    @include respond(phone) {
+        padding-block: 4rem 6rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 40% 50%;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            height: fit-content;
+        }
+    }
+
+    &__left {
+        position: relative;
+        display: grid;
+        height: 100%;
+
+        &::befor {
+            content: '';
+            width: 45rem;
+            height: 45rem;
+            border-radius: 50%;
+            background-color: rgba( 255, 255, 255, 0.1 );
+            position: absolute;
+            z-index: 1;
+            bottom: -30%;
+            left: -35%;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 9;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+        &__right {
+            padding-left: 2rem;
+            position: relative;
+
+            @include respond(phone) {
+                padding-left: 0;
+                padding-inline: 0.5rem;
+            }
+        }
+
+        &__blue {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+
+            @include respond(phone) {
+                font-size: 2.2rem;
+            }
+        }
+
+        span {
+            color: #cacacf;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        &__info {
+            margin-block: 1.5rem 2rem;
+            width: 70%;
+        }
+    }
+
+}
