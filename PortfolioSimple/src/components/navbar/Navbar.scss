@@ -37,7 +37,7 @@
             padding: 1.5rem;
             display: none;
             z-index: 99;
-            animation: navAnimation 9.7s ease;
+            animation: navAnimation 0.7s ease;
         }
     }
 
@@ -49,15 +49,16 @@
             color: #5151f0;
         }
     }
-
+    
     &__btn {
         @include respond(tab-port) {
-            display: none;
+            display: none !important;
         }
         svg {
             font-size: 1.2rem;
         }
     }
+
 
     &__menu {
         display: none;
@@ -73,22 +74,22 @@
             font-size: 1.4rem;
         }
 
-        .bg-color {
-            background-color: #5151f0;
-        }
+    }
+    .bg-color {
+        background-color: #5151f0;
+    }
 
-        .display {
-            display: flex !important;
-        }
+    .display {
+        display: flex !important;
+    }
 
-        @keyframes navAnimation {
-            0% {
-                transform: translateX(100%);
-            }
+}
+@keyframes navAnimation {
+    0% {
+        transform: translateX(100%);
+    }
 
-            100% {
-                transform: translateX(0%);
-            }
-        }
+    100% {
+        transform: translateX(0%);
     }
 }

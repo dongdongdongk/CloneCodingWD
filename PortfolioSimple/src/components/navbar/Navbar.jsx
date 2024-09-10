@@ -13,7 +13,7 @@ export const Navbar = () => {
                     <img src={Logo} alt="" />
                 </a>
 
-                <ul className={`navbar__links ${showNav ? "display" : ""}`}>
+                <ul className={`navbar__links ${showNav ? 'display' : ''}`}>
                     <li onClick={() => setShowNav(false)}>
                         <a href="#hero">Home</a>
                     </li>
@@ -27,7 +27,7 @@ export const Navbar = () => {
                         <a href="#reviews">Reviews</a>
                     </li>
                 </ul>
-                <a href="#contact" className="btn navbar__btn">
+                <a href="#contact" className="navbar__btn btn">
                     <PiEnvelopeOpen /> Contact
                 </a>
 
