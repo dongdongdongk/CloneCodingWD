@@ -14,8 +14,8 @@ const Hero = () => {
             <div className='hero__left'>
                 <img src={Img} alt=''/>
             </div>
-            <div className="hero_right">
-                <p className="cl-blue hero_blue">hello, i am</p>
+            <div className="hero__right">
+                <p className="cl-blue hero__blue">hello, i am</p>
                 <h1>Merida Swan</h1>
                 <span>UI/UX & WEB DESIGNER</span>
                 <p className="hero__info">
