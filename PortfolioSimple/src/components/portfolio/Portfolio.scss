@@ -1,0 +1,54 @@
+@import "../../styles/mixins.scss";
+
+.portfolio {
+    background-color: #101014;
+    padding-block: 7rem 9rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    &__card {
+        background-color: #202026;
+        position: relative;
+        cursor: pointer;
+        border-radius: 0.8rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        text-align: center;
+        background-color: #101014;
+        bottom: -100%;
+        width: 100%;
+        padding-block: 1rem;
+        border: 1px solid #202026;
+        transition: all 0.5s ease;
+
+        p {
+            font-size: 0.8rem
+        }
+
+        @include respond(tab-port) {
+            bottom: 0;
+        }
+    }
+
+    h6 {
+        font-size: 1.1rem;
+    }
+
+    &__card:hover {
+        .portfolio__text {
+            bottom: 0;
+        }
+    }
+}
