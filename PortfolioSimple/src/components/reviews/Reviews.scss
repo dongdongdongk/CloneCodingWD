@@ -1,0 +1,65 @@
+@import '../../styles/mixins.scss';
+
+.reviews {
+    padding-block: 5rem;
+
+    &__container {
+        margin-top: 6rem;
+    }
+
+    &__card {
+        text-align: center;
+        width: 60%;
+        background-color: #101014;
+        margin-inline: auto;
+        padding: 2rem;
+        border-radius: 0.5rem;
+
+        @include respond(tab-port) {
+            width: 96%;
+        }
+    }
+
+    &__card-img {
+        width: 5rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-inline: auto;
+    }
+
+    &__icons {
+        padding-block: 1rem;
+
+        svg {
+            color: #fdcc08;
+            font-size: 1.1rem;
+        }
+    }
+
+    h6 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        width: 60%;
+        margin-inline: auto;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
+    }
+
+    span {
+        color: #cacacf;
+        font-size: 0.9rem;
+    }
+
+    .carousel.carousel-slider {
+        overflow: hidden;
+    }
+
+    .carousel.carousel-dots {
+        bottom: -55px; 
+    }
+}
