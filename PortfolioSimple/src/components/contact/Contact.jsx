@@ -7,16 +7,18 @@ export const Contact = () => {
             <div className="contact__container wrapper">
                 <div className="contact_left">
                     <form action="">
-                        <input type="text" placeholder="Full Name" required />
-                        <input type="email" placeholder="Email" required />
-                        <input type="text" placeholder="Subject" required />
-                        <select>
-                            <option value="">Services</option>
-                            <option value="branding">Branding</option>
-                            <option value="ui-design">UI/UX Design</option>
-                            <option value="web-design">Web Design</option>
-                            <option value="web-dev">Web Development</option>
-                        </select>
+                        <div className="input__container">
+                            <input type="text" placeholder="Full Name" required />
+                            <input type="email" placeholder="Email" required />
+                            <input type="text" placeholder="Subject" required />
+                            <select>
+                                <option value="">Services</option>
+                                <option value="branding">Branding</option>
+                                <option value="ui-design">UI/UX Design</option>
+                                <option value="web-design">Web Design</option>
+                                <option value="web-dev">Web Development</option>
+                            </select>
+                        </div>
                         <textarea
                             name="message"
                             id=""
@@ -25,7 +27,9 @@ export const Contact = () => {
                             placeholder="Message"
                         >
                         </textarea>
-                        <a href="#" className="btn">Send Message</a>
+                        <div className="btn-container">
+                            <a href="#" className="btn">Send Message</a>
+                        </div>
                     </form>
                 </div>
                 <div className="contact__right">
