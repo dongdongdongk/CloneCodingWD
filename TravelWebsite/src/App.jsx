@@ -9,13 +9,12 @@ import { Blog } from './components/Blog/Blog'
 import { Footer } from './components/Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Navbar />
-      {/* <Home />
-      <Popular />
+      <Home />
+      {/* <Popular />
       <Offers />
       <About />
       <Blog />

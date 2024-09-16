@@ -52,12 +52,12 @@ export const Navbar = () => {
                             </button>
                         </div>
                     </ul>
-                    <div onClick={removeNav} className="closeNavbar">
+                    <div onClick={removeNav} className="closeNavBar">
                         <AiFillCloseCircle className="icon" />
                     </div>
 
                 </div>
-                    <div onClick={showNav} className="toggleNavbar">
+                    <div onClick={showNav} className="toggleNavBar">
                         <TbGridDots className="icon" />
                     </div>
             </div>

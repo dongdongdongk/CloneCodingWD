@@ -101,7 +101,7 @@
                     }
                 }
 
-                .closeNavbar {
+                .closeNavBar {
                     position: absolute;
                     top: 1rem;
                     right: 1.5rem;
@@ -114,6 +114,16 @@
 
             .activeNavBar {
                 left: 0;
+            }
+        }
+
+        .toggleNavBar {
+            .icon {
+                font-size: 25px;
+                color: var(--whiteColor);
+                &:hover {
+                    color: var(--PrimaryColor);
+                }
             }
         }
     }
