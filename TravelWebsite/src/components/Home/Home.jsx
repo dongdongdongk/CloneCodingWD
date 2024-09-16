@@ -25,11 +25,11 @@ export const Home = () => {
                     <input type="text" placeholder='DreamDestination'/>
                 </div>
                 <div className="distDiv">
-                    <label htmlFor="distance">Location</label>
+                    <label htmlFor="distance">Distance</label>
                     <input type="text" placeholder='11/Meters'/>
                 </div>
                 <div className="priceDiv">
-                    <label htmlFor="price">Location</label>
+                    <label htmlFor="price">Price</label>
                     <input type="text" placeholder='$140-$550'/>
                 </div>
                 <button className='btn'>
