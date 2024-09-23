@@ -2,6 +2,8 @@ import React from 'react'
 import { MdAirportShuttle, MdBathtub, MdKingBed, MdLocationOn } from 'react-icons/md'
 import { FaWifi } from 'react-icons/fa'
 import { BsArrowRightShort } from 'react-icons/bs'
+import img from '../../assets/Offers.jpg'
+import './Offers.scss'
 
 export const Offers = () => {
   return (
@@ -18,7 +20,7 @@ export const Offers = () => {
           <div className="mainContent grid">
             <div className="singleOffer">
               <div className="destImage">
-                <img src="" alt="Image Name" />
+                <img src={img} alt="Image Name" />
                 <span className="discount">
                   30% Off
                 </span>
@@ -29,40 +31,40 @@ export const Offers = () => {
                   <h4>
                     $1000
                   </h4>
+                  <span className="status">
+                    For Rent
+                  </span>
                 </div>
-                <span className="status">
-                  For Rent
-                </span>
+                <div className="amenities flex">
+                  <div className="singleAmenity flex">
+                    <MdKingBed className='icon' />
+                    <small>2 Beds</small>
+                  </div>
+                  <div className="singleAmenity flex">
+                    <MdBathtub className='icon' />
+                    <small>1 Bath</small>
+                  </div>
+                  <div className="singleAmenity flex">
+                    <FaWifi className='icon' />
+                    <small>Wi - FI</small>
+                  </div>
+                  <div className="singleAmenity flex">
+                    <MdAirportShuttle className='icon' />
+                    <small>Shuttle</small>
+                  </div>
+                </div>
+                <div className="location">
+                  <MdLocationOn className='icon' />
+                  <small>450 Vine #310, London</small>
+                </div>
+
+                <button className='btn flex'>
+                  View Details
+                  <BsArrowRightShort className='icon' />
+                </button>
               </div>
 
-              <div className="amenities flex">
-                <div className="singleAmenity flex">
-                  <MdKingBed className='icon' />
-                  <small>2 Beds</small>
-                </div>
-                <div className="singleAmenity flex">
-                  <MdBathtub className='icon' />
-                  <small>1 Bath</small>
-                </div>
-                <div className="singleAmenity flex">
-                  <FaWifi className='icon' />
-                  <small>Wi - FI</small>
-                </div>
-                <div className="singleAmenity flex">
-                  <MdAirportShuttle className='icon' />
-                  <small>Shuttle</small>
-                </div>
-              </div>
 
-              <div className="location">
-                <MdLocationOn className='icon' />
-                <small>450 Vine #310, London</small>
-              </div>
-
-              <button className='btn flex'>
-                View Details
-                <BsArrowRightShort className='icon'/>
-              </button>
             </div>
 
           </div>
