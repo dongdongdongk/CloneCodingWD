@@ -2,8 +2,34 @@ import React from 'react'
 import { MdAirportShuttle, MdBathtub, MdKingBed, MdLocationOn } from 'react-icons/md'
 import { FaWifi } from 'react-icons/fa'
 import { BsArrowRightShort } from 'react-icons/bs'
-import img from '../../assets/Offers.jpg'
+import img from '../../assets/Offers.jpg';
+import img1 from '../../assets/Offers1.jpg';
+import img2 from '../../assets/Offers2.jpg';
 import './Offers.scss'
+
+const Offer = [
+  {
+    id: 1,
+    imgSrc: img,
+    stTdeitle: 'Machu Picchu',
+    location: 'Peru',
+    price: '$6,432'
+  },
+  {
+    id: 2,
+    imgSrc: img1,
+    stTdeitle: 'Guanajuato',
+    location: 'Mexico',
+    price: '$4,642'
+  },
+  {
+    id: 3,
+    imgSrc: img2,
+    stTdeitle: 'Angkor Wat',
+    location: 'Cambodia',
+    price: '$1,222'
+  }
+];
 
 export const Offers = () => {
   return (
@@ -16,58 +42,112 @@ export const Offers = () => {
           <p>
             From historical cities to natural specteculars, come see the best of the world!
           </p>
+        </div>
 
-          <div className="mainContent grid">
-            <div className="singleOffer">
-              <div className="destImage">
-                <img src={img} alt="Image Name" />
-                <span className="discount">
-                  30% Off
-                </span>
-              </div>
-
-              <div className="offerBody">
-                <div className="price flex">
-                  <h4>
-                    $1000
-                  </h4>
-                  <span className="status">
-                    For Rent
-                  </span>
-                </div>
-                <div className="amenities flex">
-                  <div className="singleAmenity flex">
-                    <MdKingBed className='icon' />
-                    <small>2 Beds</small>
-                  </div>
-                  <div className="singleAmenity flex">
-                    <MdBathtub className='icon' />
-                    <small>1 Bath</small>
-                  </div>
-                  <div className="singleAmenity flex">
-                    <FaWifi className='icon' />
-                    <small>Wi - FI</small>
-                  </div>
-                  <div className="singleAmenity flex">
-                    <MdAirportShuttle className='icon' />
-                    <small>Shuttle</small>
-                  </div>
-                </div>
-                <div className="location">
-                  <MdLocationOn className='icon' />
-                  <small>450 Vine #310, London</small>
-                </div>
-
-                <button className='btn flex'>
-                  View Details
-                  <BsArrowRightShort className='icon' />
-                </button>
-              </div>
-
-
+        <div className="mainContent grid">
+          {/* <div className="singleOffer">
+            <div className="destImage">
+              <img src={img} alt="Image Name" />
+              <span className="discount">
+                30% Off
+              </span>
             </div>
 
-          </div>
+            <div className="offerBody">
+              <div className="price flex">
+                <h4>
+                  $1000
+                </h4>
+                <span className="status">
+                  For Rent
+                </span>
+              </div>
+              <div className="amenities flex">
+                <div className="singleAmenity flex">
+                  <MdKingBed className='icon' />
+                  <small>2 Beds</small>
+                </div>
+                <div className="singleAmenity flex">
+                  <MdBathtub className='icon' />
+                  <small>1 Bath</small>
+                </div>
+                <div className="singleAmenity flex">
+                  <FaWifi className='icon' />
+                  <small>Wi - FI</small>
+                </div>
+                <div className="singleAmenity flex">
+                  <MdAirportShuttle className='icon' />
+                  <small>Shuttle</small>
+                </div>
+              </div>
+              <div className="location">
+                <MdLocationOn className='icon' />
+                <small>450 Vine #310, London</small>
+              </div>
+
+              <button className='btn flex'>
+                View Details
+                <BsArrowRightShort className='icon' />
+              </button>
+            </div>
+
+
+          </div> */}
+          {
+            Offer.map(({id, imgSrc, stTdeitle, location, price}) => {
+              return (
+                <div className="singleOffer">
+                  <div className="destImage">
+                    <img src={imgSrc} alt={stTdeitle} />
+                    <span className="discount">
+                      30% Off
+                    </span>
+                  </div>
+
+                  <div className="offerBody">
+                    <div className="price flex">
+                      <h4>
+                        {price}
+                      </h4>
+                      <span className="status">
+                        For Rent
+                      </span>
+                    </div>
+                    <div className="amenities flex">
+                      <div className="singleAmenity flex">
+                        <MdKingBed className='icon' />
+                        <small>2 Beds</small>
+                      </div>
+                      <div className="singleAmenity flex">
+                        <MdBathtub className='icon' />
+                        <small>1 Bath</small>
+                      </div>
+                      <div className="singleAmenity flex">
+                        <FaWifi className='icon' />
+                        <small>Wi - FI</small>
+                      </div>
+                      <div className="singleAmenity flex">
+                        <MdAirportShuttle className='icon' />
+                        <small>Shuttle</small>
+                      </div>
+                    </div>
+                    <div className="location">
+                      <MdLocationOn className='icon' />
+                      <small>450 Vine #310, {location}</small>
+                    </div>
+
+                    <button className='btn flex'>
+                      View Details
+                      <BsArrowRightShort className='icon' />
+                    </button>
+                  </div>
+
+
+                </div>
+              )
+            })
+          }
+
         </div>
       </div>
     </section>
