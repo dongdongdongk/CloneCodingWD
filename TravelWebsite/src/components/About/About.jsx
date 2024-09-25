@@ -1,6 +1,7 @@
 import img from '../../assets/customer.png'
 import img2 from '../../assets/mountain.png'
 import img3 from '../../assets/hiking.png'
+import video from '../../assets/About.mp4'
 import './About.scss'
 
 export const About = () => {
