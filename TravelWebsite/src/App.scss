@@ -94,3 +94,15 @@ img, video {
     height: auto;
     
 }
+
+input {
+    font-size: 100%;
+}
+
+
+// 미디어 쿼리 
+@media screen and (min-width: 556px) {
+    .mainContent {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
