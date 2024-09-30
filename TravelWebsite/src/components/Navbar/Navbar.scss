@@ -59,19 +59,21 @@
 
                     .navItem {
                         padding: 1rem 0;
-                    
+
                         .navLink {
                             color: var(--textColor);
                             font-size: .9rem;
                             font-weight: 600;
+
                             &:hover {
                                 color: var(--PrimaryColor);
                             }
                         }
                     }
 
-                    .headerBtns{
+                    .headerBtns {
                         flex-direction: column;
+
                         .btn {
                             margin-top: 1rem;
 
@@ -94,6 +96,7 @@
 
                             &:hover {
                                 background: var(--HoverColor);
+
                                 a {
                                     color: var(--whiteColor);
                                 }
@@ -107,6 +110,7 @@
                     top: 1rem;
                     right: 1.5rem;
                     color: var(--PrimaryColor);
+
                     &:hover .icon {
                         color: var(--HoverColor);
                     }
@@ -122,6 +126,7 @@
             .icon {
                 font-size: 25px;
                 color: var(--whiteColor);
+
                 &:hover {
                     color: var(--PrimaryColor);
                 }
@@ -132,5 +137,81 @@
     .activeHeader {
         background: var(--greyText);
         box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+    }
+}
+
+
+//미디어 쿼리 
+@media screen and (min-width: 769px) {
+
+    .navBarSection {
+
+        .toggleNavBar,
+        .closeNavBar {
+            display: none;
+        }
+
+        .header {
+            padding: 1.5rem 2rem;
+
+            .navBar {
+                .navLists {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                }
+
+                .navItem {
+                    .navLink {
+                        color: var(--whiteColor);
+                        padding: 0 .45rem;
+                        font-size: .9rem;
+                        font-weight: 400;
+
+                        &:hover {
+                            color: var(--PrimaryColor);
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-left: 1rem;
+
+                    a {
+                        color: var(--whiteColor);
+                        font-weight: 500;
+                    }
+                }
+
+                .loginBtn {
+                    background: none;
+                    border: 1px solid var(--PrimaryColor);
+
+                    &:hover {
+                        background: var(--PrimaryColor);
+                        a {
+                            color: var(--whiteColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        .navBar {
+            .navItem {
+                padding: 0 .7rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        padding: 1rem 8.5rem !important;
     }
 }
