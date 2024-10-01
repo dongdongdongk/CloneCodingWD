@@ -13,9 +13,9 @@
 
 .popular {
     padding-top: 15rem;
-    
+
     .secContainer {
-        
+
         .secHeader {
             flex-direction: column;
             align-items: flex-start;
@@ -38,11 +38,13 @@
 
             .iconsDiv {
                 gap: 0.5rem;
+
                 .icon {
                     padding: .5rem;
                     background: var(--greyText);
                     border-radius: 50%;
                     font-size: 2.5rem;
+
                     &:hover {
                         background: var(--blackColor);
                         column-rule: var(--whiteColor);
@@ -52,6 +54,7 @@
                 .leftIcon {
                     background-color: var(--blackColor);
                     color: var(--whiteColor);
+
                     &:hover {
                         background: var(--greyText);
                         color: var(--blackColor);
@@ -67,7 +70,7 @@
             .singleDestination {
                 overflow: hidden;
                 border-radius: 1rem;
-                box-shadow:  0 2px 8px 2px rgba(178, 178, 178, 0.45);
+                box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
 
                 .destImage {
                     height: 200px;
@@ -117,7 +120,7 @@
                             border-radius: 50%;
                             color: var(--whiteColor);
                             border: 1px solid transparent;
-                            transition:  .3s ease;
+                            transition: .3s ease;
 
                             &:hover {
                                 background: var(--blackColor);
@@ -191,5 +194,62 @@
 @media screen and (min-width: 480px) {
     .popular {
         padding-top: 10rem;
+    }
+}
+
+
+@media screen and (min-width: 556px) {
+    .popular {
+        .secContainer {
+
+            .secHeader {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .textDiv {
+                    text-align: start;
+                    max-width: 70%;
+                }
+
+                .iconsDiv {
+                    justify-content: flex-end;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .popular {
+        padding-top: 7rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .popular {
+        padding-top: 10rem;
+
+        .secContainer {
+            .secHeader {
+                .textDiv {
+                    .secTitle {
+                        font-size: 2.2rem;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .mainContent {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem !important;
+            }
+        }
     }
 }
