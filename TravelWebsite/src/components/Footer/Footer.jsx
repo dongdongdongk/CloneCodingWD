@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import './footer.scss'
 import { MdTravelExplore } from "react-icons/md";
 import { ImFacebook } from "react-icons/im";

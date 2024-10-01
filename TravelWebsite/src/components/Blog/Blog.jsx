@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import './Blog.scss';
 import { BsArrowRightShort } from 'react-icons/bs'
 import img1 from '../../assets/blog1.jpg'
@@ -57,9 +57,9 @@ export const Blog = () => {
           {
             Post.map(({ id, postImage, title, desc }) => {
               return (
-                <div data-aos="fade-up" data-aos-duration="2000" className="singlePost grid">
-                  <div className="imgDiv">
-                    <img src={postImage} alt='Image Name' />
+                <div key={id} data-aos="fade-up" data-aos-duration="2000" className="singlePost grid">
+                  <div className="imgDiv" >
+                    <img src={postImage} alt='Image Name'/>
                   </div>
                   <div className="postDetails">
                     <h3 data-aos="fade-up" data-aos-duration="3000">
