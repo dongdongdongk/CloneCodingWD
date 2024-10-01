@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MdAirportShuttle, MdBathtub, MdKingBed, MdLocationOn } from 'react-icons/md'
 import { FaWifi } from 'react-icons/fa'
 import { BsArrowRightShort } from 'react-icons/bs'
@@ -6,6 +6,8 @@ import img from '../../assets/Offers.jpg';
 import img1 from '../../assets/Offers1.jpg';
 import img2 from '../../assets/Offers2.jpg';
 import './Offers.scss'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Offer = [
   {
@@ -32,10 +34,15 @@ const Offer = [
 ];
 
 export const Offers = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
   return (
     <section className="offer container section">
       <div className="secContainer">
-        <div className="secIntro">
+        <div data-aos="fade-up" data-aos-duration="2000" className="secIntro">
           <h2 className="secTitle">
             Special Offers
           </h2>
@@ -94,9 +101,9 @@ export const Offers = () => {
 
           </div> */}
           {
-            Offer.map(({id, imgSrc, stTdeitle, location, price}) => {
+            Offer.map(({ id, imgSrc, stTdeitle, location, price }) => {
               return (
-                <div className="singleOffer">
+                <div data-aos="fade-right" data-aos-duration="3000" className="singleOffer">
                   <div className="destImage">
                     <img src={imgSrc} alt={stTdeitle} />
                     <span className="discount">
