@@ -1,9 +1,13 @@
 import "./App.scss"
+import Home from "./components/home/Home"
 import { Sidebar } from "./components/sidebar/Sidebar"
 
 const App = () => {
   return (
-    <Sidebar />
+    <>
+      <Sidebar />
+      <Home />
+    </>
   )
 }
 
